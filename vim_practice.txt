@@ -1,0 +1,29 @@
+vim 实践笔记
+
+
+一、命令
+命令格式一般是 cmd + number + motion/operators.
+cmd 是要执行的命令操作。
+number 是该命令执行的次数。
+motion/operators 是命令执行的对象。
+
+    1. 删除操作
+    cmd = d, 
+    motions = w/e/$
+    dw: 删除当前光标位置至下个单词开始，不包括下个单词首字符。
+    de: 删除当前光标位置处的单词，包括该单词的最后一个字符。
+    d$: 删除当前光标位置至该行结束。
+    dd: 删除一行。因为删除一行使用较多，设计者使用dd删除一行。
+        前面加数字表示删除多行。
+
+    2. put操作
+    cmd = p
+    将上一个删除的内容黏贴在当前光标行下方。
+    3. 替换
+        替换单个字符：
+        cmd = r + 需要替换的字符。
+        替换一个单词：
+        cmd = c + e + 需要替换的单词。这个命令会进入插入模式。
+        更多替换:
+        c    [number]   motion
+        motions could be w(world) and $(end of line)     
